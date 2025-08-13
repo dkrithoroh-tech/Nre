@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мій Telegram WebApp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            text-align: center;
+            padding: 50px;
+        }
+        button {
+            padding: 15px 25px;
+            background: #0088cc;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #006699;
+        }
+    </style>
+</head>
+<body>
+    <h1>Привіт з Telegram WebApp! 👋</h1>
+    <p>Це тестова сторінка для твого бота.</p>
+    <button onclick="sendData()">Відправити дані в бота</button>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        const tg = window.Telegram.WebApp;
+        tg.expand(); // Розширює WebApp на весь екран
+
+        function sendData() {
+            tg.sendData("Привіт, я з веб-додатку!"); // Відправляє дані в бота
+        }
+    </script>
+</body>
+</html>
